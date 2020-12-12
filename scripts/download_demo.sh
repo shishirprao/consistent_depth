@@ -2,7 +2,7 @@
 
 set -exo
 
-results_dir="$1"
+results_dir="results_dir"
 
 mkdir -p data/videos/
 wget https://www.dropbox.com/s/9a2kb7flg3o1eb5/ayush_color.mp4?dl=1 -O data/videos/ayush.mp4
