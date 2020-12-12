@@ -33,7 +33,7 @@ git checkout $(git describe --tags) # Checkout the latest release
 mkdir build
 cd build
 cmake .. -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF
-make
+make -j$(nproc)
 sudo make install
 popd  # pop ceres-solver
 
@@ -45,7 +45,7 @@ git checkout tags/3.6-dev.3 -b dev-3.6
 mkdir build
 cd build
 cmake ..
-make
+make -j$(nproc)
 sudo make install
 CC=/usr/bin/gcc-6 CXX=/usr/bin/g++-6 cmake ..
 popd  # pop colmap
